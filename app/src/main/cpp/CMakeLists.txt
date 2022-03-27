@@ -14,7 +14,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${FFMPEG}/libs/${CMAKE_ANDROID_ARCH_AB
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${WEBP}/libs/${CMAKE_ANDROID_ARCH_ABI}") # webp库指定
 
 # 批量导入 源文件
-file(GLOB src_files *.cpp)
+file(GLOB src_files *.cpp *.c)
 
 add_library(
         gifencoder

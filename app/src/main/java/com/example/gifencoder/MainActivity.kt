@@ -14,19 +14,13 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Example of a call to a native method
-        binding.sampleText.text = stringFromJNI()
+        binding.sampleText.text = decodeWebp("")
     }
 
-    /**
-     * A native method that is implemented by the 'gifencoder' native library,
-     * which is packaged with this application.
-     */
     external fun stringFromJNI(): String
+    external fun decodeWebp(path: String): String
 
     companion object {
-        // Used to load the 'gifencoder' library on application startup.
         init {
             System.loadLibrary("gifencoder")
         }
